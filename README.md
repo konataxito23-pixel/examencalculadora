@@ -1,25 +1,18 @@
 Este proyecto es un servicio web simple que permite realizar operaciones matemáticas básicas (suma, resta, multiplicación y división) mediante una interfaz web.
 
-## 🚀 Cómo ejecutar
+# 1) Clonar repo
+git clone https://github.com/konataxito23-pixel/examencalculadora.git
+cd examencalculadora
 
-###Construir la imagen Docker
-```bash
+# 2) Construir la imagen (en la instancia Linux)
 sudo docker build -t calculadora-telematica .
-```
 
-### Ejecutar el contenedor
-```bash
-sudo docker run -d -p 80:5000 calculadora-telematica
-```
+# 3) Ejecutar el contenedor (puerto 8080 recomendado)
+sudo docker run -d -p 8080:5000 --name calculadora calculadora-telematica
 
-###  Acceder a la aplicación
-En el navegador:
-```
-http://<IP-PUBLICA-DE-TU-EC2>/
-```
+# 4) Verificar
+sudo docker ps
+curl http://localhost:5000/status    # si implementas status en main.py
 
-## 🐍 Tecnologías
-- Python 3
-- Flask
-- Docker
-- HTML + CSS
+# Acceder desde el navegador:
+# http://<IP-PUBLICA-DE-LA-EC2>:8080/
