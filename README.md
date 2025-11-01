@@ -15,4 +15,4 @@ sudo docker ps
 curl http://localhost:5000/status    # si implementas status en main.py
 
 # Acceder desde el navegador:
-# http://<IP-PUBLICA-DE-LA-EC2>:8080/
+# http://IP PUBLICA DE LA INSTANCIA DE AWS:8080/
